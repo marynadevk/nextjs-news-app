@@ -29,6 +29,16 @@ const FilteredNewsPage: FC<Props> = ({ params }) => {
     links = [];
   }
 
+  const isYearAvailable = getAvailableNewsYears().includes(+selectedYear);
+  const isMonthAvailable = getAvailableNewsMonths(selectedYear).includes(+selectedMonth);
+
+  if (
+    (selectedYear && !isYearAvailable) ||
+    (selectedMonth && !isMonthAvailable)
+  ) {
+    throw new Error('Invalid filter.');
+  }
+
   return (
     <>
       <header id="archive-header">
