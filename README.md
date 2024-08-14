@@ -10,12 +10,6 @@ The **Next.js News App** is a simple web application built with Next.js and Type
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js v16 or higher
-- npm or yarn
-- A Cloudinary account for image uploads
-
 ### Installation
 
 1. **Clone the repository:**
