@@ -1,9 +1,8 @@
-import { INewsArticle } from '@/interfaces/INewsArticle';
 import Link from 'next/link';
 import { FC } from 'react';
 
 type Props = {
-  news: INewsArticle[];
+  news: any[];
 };
 
 const NewsList: FC<Props> = ({ news }) => {

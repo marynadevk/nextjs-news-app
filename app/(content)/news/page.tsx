@@ -1,12 +1,14 @@
 import NewsList from '@/components/news-list';
-import { DUMMY_NEWS } from '@/public/dummy-news';
-import { FC } from 'react';
+import { INewsArticle } from '@/interfaces/INewsArticle';
+import { getAllNews } from '@/lib/helpers';
 
-const NewsPage: FC = () => {
+const NewsPage = async () => {
+  const news = await getAllNews();
+
   return (
     <>
       <h1>News Page</h1>
-      <NewsList news={DUMMY_NEWS} />
+      <NewsList news={news} />
     </>
   );
 };
